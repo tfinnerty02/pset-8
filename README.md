@@ -141,11 +141,23 @@ Given an array of `String`s, `values`, return the number of _clumps_ in the arra
 - `values` must not be `null`
 - `values` must not contain any `null` values
 
-Use the provided `Grader.java` file to verify your code against my test cases.
+Use the provided `grader.jar` file to verify your code against my test cases.
 
-## Deliverables
+## Tests
 
-Coming soon!
+To test your code, use the provided `grader.jar` file. You'll need to unzip `grader.zip`, which contains `grader.jar` and a necessary `config` folder. To run the JAR file, use the following command.
+
+```
+java -jar grader.jar
+```
+
+If you run the JAR from the same directory as your `Exercises.class` file, this will work fine. If you're running the JAR from a different directory, you'll need to add your `.class` file to my JAR file.
+
+```
+jar uf grader.jar /path/to/Exercises.class
+```
+
+It'll output the number passing test cases, as well as the input, expected output, and actual output of any failing test cases.
 
 ## Deadline
 
@@ -163,4 +175,3 @@ If you submit your problem set at midnight (i.e., January 21, 2020, at 12:00am),
 - Your code must adhere to the course style guidelines.
 
 Happy coding!
-
