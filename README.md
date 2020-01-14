@@ -49,6 +49,8 @@ The specifications for each exercise are outlined below. Your job is to write li
 
 Work through these exercises on your own. Experiment, make mistakes, ask questions, and fix your mistakes. It's the only way to get good at programming.
 
+While each of these exercises can be solved using loops and conditional statements, the built-in methods of the `Arrays` class will surely make your lives much easier. [Read the documentation](https://docs.oracle.com/en/java/javase/12/docs/api/java.base/java/util/Arrays.html) and use these methods to help streamline your code!
+
 ### Exercise 1 (`commonEnd`)
 
 Given two arrays of `int`s, `a` and `b`, return `true` if the arrays have either the same first element or the same last element. The arrays must meed the following specifications, otherwise you should return `false`.
