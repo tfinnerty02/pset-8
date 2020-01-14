@@ -2,6 +2,11 @@ import java.util.*;
 
 public class Exercises {
 
+	public static void main(String[] args) {
+//		System.out.println(endsMeet(String[] values = {"1", "2", "3", "4", "5", "6"}, 2));
+		System.out.println("p");
+	}
+
 	public boolean commonEnd(int[] a, int[] b) {
 		if (a == null || a.length == 0 || b == null || b.length == 0) {
 			return false;
@@ -16,21 +21,21 @@ public class Exercises {
 	}
 
 	public String[] endsMeet(String[] values, int n) {
-		if (values == null || values.length < n || n < 0) {
-			return [];
-		}
+//		if (values == null) {
+//			values = new String[0];
+//			return values;
+//		} // work on other cases here
+//
+//		// write your code here
+//		String[] firstLastN = new String[n * 2];
+//		String[] firstN = Arrays.copyOfRange(values, 0, n - 1);
+//		String[] lastN = Arrays.copyOfRange(values, values.length - 1 - n, values.length - 1);
+//
+//		System.arraycopy(firstN, 0, firstLastN, 0, n);
+//		System.arraycopy(lastN, 0, firstLastN, n, n * 2);
+//
+//		return firstLastN;
 
-			// write your code here
-			String[] firstLastN = new String[n * 2];
-			String[] firstN = values.copyOfRange(0, n - 1);
-			String[] lastN = values.copyOfRange(values.length - 1 - n, values.length - 1);
-
-			System.arraycopy(firstN, 0, firstLastN, 0, n);
-			System.arraycopy(lastN, 0, firstLastN, n, n * 2);
-
-			return firstLastN;
-
-		return null; // default return value to ensure compilation
 	}
 
 	public int difference(int[] numbers) {
