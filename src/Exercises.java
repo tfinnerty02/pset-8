@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Exercises {
 
  public boolean commonEnd(int[] a, int[] b) {
@@ -20,15 +22,13 @@ public class Exercises {
 
 	// write your code here
 	String[] firstLastN = new String[n * 2];
-	for (int i = 0; i < n; i ++) {
-		// loop n times and add first n
-		firstLastN[i] = values[i];
-	}
+	String[] firstN = values.copyOfRange(0, n - 1);
+	String[] lastN = values.copyOfRange(values.length - 1 - n ,values.length - 1);
 
-	for (int j = values.length - 1; j > values.length - n; j--) {
-		// loop n times and add last n
-		firstLastN[j] = values[j];
-	}
+	System.arraycopy(array1, 0, firstLastN, 0, n);
+  System.arraycopy(array2, 0, firstLastN, n, n);
+
+	return firstLastN;
 
   return null; // default return value to ensure compilation
  }
