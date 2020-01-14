@@ -14,7 +14,21 @@ public class Exercises {
  }
 
  public String[] endsMeet(String[] values, int n) {
-  // write your code here
+	 if (values == null || values.length < n || n < 0) {
+		 return null;
+	 }
+
+	// write your code here
+	String[] firstLastN = new String[n * 2];
+	for (int i = 0; i < n; i ++) {
+		// loop n times and add first n
+		firstLastN[i] = values[i];
+	}
+
+	for (int j = values.length - 1; j > values.length - n; j--) {
+		// loop n times and add last n
+		firstLastN[j] = values[j];
+	}
 
   return null; // default return value to ensure compilation
  }
