@@ -5,6 +5,8 @@ public class Exercises {
 	public static void main(String[] args) {
 //		System.out.println(endsMeet(String[] values = {"1", "2", "3", "4", "5", "6"}, 2));
 		System.out.println("p");
+		
+//		int[] h = {1, 2, 3, 4, 5, 6, 7, 8};
 	}
 
 	public boolean commonEnd(int[] a, int[] b) {
@@ -21,13 +23,14 @@ public class Exercises {
 	}
 
 	public String[] endsMeet(String[] values, int n) {
-//		if (values == null) {
+//		if (values == null || values.length < n || n < 0) {
 //			values = new String[0];
 //			return values;
 //		} // work on other cases here
 //
 //		// write your code here
-//		String[] firstLastN = new String[n * 2];
+//		int stringLength = n * 2;
+//		String[] firstLastN = new String[stringLength];
 //		String[] firstN = Arrays.copyOfRange(values, 0, n - 1);
 //		String[] lastN = Arrays.copyOfRange(values, values.length - 1 - n, values.length - 1);
 //
@@ -35,17 +38,49 @@ public class Exercises {
 //		System.arraycopy(lastN, 0, firstLastN, n, n * 2);
 //
 //		return firstLastN;
-
+	
+		return null;
+		
 	}
 
 	public int difference(int[] numbers) {
 		// write your code here
-
-		return -1; // default return value to ensure compilation
+		if (numbers == null || numbers.length < 1) {
+			return -1;
+		}
+		int min = 0;
+		int max = 0;
+		
+		if (numbers.length > 0) {
+		    min = numbers[0];
+		    
+		    for (int number : numbers) {
+		        if (number < min) {
+		            min = number;
+		        }
+		    }
+		}
+		
+		if (numbers.length > 0) {
+		    max = numbers[0];
+		    
+		    for (int number : numbers) {
+		        if (number > max) {
+		            max = number;
+		        }
+		    }
+		}
+		
+		return max - min;
 	}
 
 	public double biggest(double[] numbers) {
 		// write your code here
+		double first = numbers[0];
+		double middle = numbers[numbers.length / 2];
+		double last = numbers[numbers.length - 1];
+		
+		// compare the three and return here
 
 		return -1; // default return value to ensure compilation
 	}
