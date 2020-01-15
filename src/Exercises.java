@@ -31,16 +31,15 @@ public class Exercises {
 //		// write your code here
 //		int stringLength = n * 2;
 //		String[] firstLastN = new String[stringLength];
-//		String[] firstN = Arrays.copyOfRange(values, 0, n - 1);
-//		String[] lastN = Arrays.copyOfRange(values, values.length - 1 - n, values.length - 1);
-//
-//		System.arraycopy(firstN, 0, firstLastN, 0, n);
-//		System.arraycopy(lastN, 0, firstLastN, n, n * 2);
+//		for (int i = 0; i < n; i++) {
+//			firstLastN[i] = values[i];
+//		}
+//		for (int j = n; j < n*2; j++) {
+//			firstLastN[j] = values[values.length - j];
+//		}
 //
 //		return firstLastN;
-
 		return null;
-
 	}
 
 	public int difference(int[] numbers) {
@@ -111,7 +110,16 @@ public class Exercises {
 	}
 
 	public boolean increasing(int[] numbers) {
+		if (numbers == null || numbers.length < 3) {
+			return false;
+		}
+		
 		// write your code here
+		for (int i = 0; i < numbers.length; i += 3) {
+			if (numbers[i] < numbers[i+1] && numbers[i+1] <= numbers[i+2]) {
+				return true;
+			}
+		}
 
 		return false; // default return value to ensure compilation
 	}
