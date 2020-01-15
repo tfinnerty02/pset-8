@@ -97,7 +97,8 @@ public class Exercises {
 
 	public String[] middle(String[] values) {
 		if (values == null || Arrays.asList(values).contains(null) || values.length < 3 || values.length % 2 == 0) {
-			return null;
+			values = new String[0];
+			return values;
 		}
 
 		int middle = values.length / 2;
