@@ -108,7 +108,7 @@ public class Exercises {
 				return true;
 			}
 		}
-		return false; // default return value to ensure compilation
+		return false;
 	}
 
 	public boolean everywhere(int[] numbers, int x) {
@@ -144,7 +144,7 @@ public class Exercises {
 			}
 		}
 
-		return false; // default return value to ensure compilation
+		return false;
 	}
 
 	public boolean balance(int[] numbers) {
@@ -168,12 +168,30 @@ public class Exercises {
 			return true;
 		}
 
-		return false; // default return value to ensure compilation
+		return false;
 	}
 
 	public int clumps(String[] values) {
-		// write your code here
+		try {
+			List<String> list = Arrays.asList(values);
+		} catch (NullPointerException e) {
+			return -1;
+		}
+		if (values == null) {
+			return -1;
+		}
 
-		return -1; // default return value to ensure compilation
+		boolean clumps = false;
+		int count = 0;
+		for (int i = 0; i < values.length - 1; i++) {
+			if (values[i].equals(values[i + 1]) && !clumps) {
+				clumps = true;
+				count++;
+			} else if (!values[i].equals(values[i + 1])) {
+				clumps = false;
+			}
+		}
+
+		return count;
 	}
 }
