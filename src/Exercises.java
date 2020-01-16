@@ -116,16 +116,30 @@ public class Exercises {
 			return false;
 		}
 
-		boolean everywhere = true;
-		int j;
-		for (int i = 0; i < numbers.length - 2; i++) {
-			j = i + 2;
-			if (numbers[i] != numbers[j]) {
-				everywhere = false;
+		ArrayList<Integer> evenIndexes = new ArrayList<Integer>();
+		ArrayList<Integer> oddIndexes = new ArrayList<Integer>();
+
+		int countXEven = 0;
+		int countXOdd = 0;
+		for (int i = 0; i < numbers.length - 1; i++) {
+			evenIndexes.add(numbers[i]);
+			oddIndexes.add(numbers[++i]);
+		}
+		for (int j = 0; j < evenIndexes.size() - 1; j++) {
+			if (evenIndexes.get(j) == evenIndexes.get(++j)) {
+				countXEven++;
 			}
 		}
-
-		return everywhere;
+		for (int k = 0; k < oddIndexes.size() - 1; k++) {
+			if (oddIndexes.get(k) == oddIndexes.get(++k)) {
+				countXOdd++;
+			}
+		}
+		if (countXEven == evenIndexes.size() || countXOdd == oddIndexes.size()) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	public boolean consecutive(int[] numbers) {
