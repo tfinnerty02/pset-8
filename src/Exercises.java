@@ -121,17 +121,19 @@ public class Exercises {
 
 		int countXEven = 0;
 		int countXOdd = 0;
-		for (int i = 0; i < numbers.length - 1; i++) {
+		for (int i = 0; i < numbers.length; i+= 2) {
 			evenIndexes.add(numbers[i]);
-			oddIndexes.add(numbers[++i]);
+		}
+		for (int i = 1; i < numbers.length; i+= 2) {
+			oddIndexes.add(numbers[i]);
 		}
 		for (int j = 0; j < evenIndexes.size() - 1; j++) {
-			if (evenIndexes.get(j) == evenIndexes.get(++j)) {
+			if (evenIndexes.get(j).equals(x)) {
 				countXEven++;
 			}
 		}
 		for (int k = 0; k < oddIndexes.size() - 1; k++) {
-			if (oddIndexes.get(k) == oddIndexes.get(++k)) {
+			if (oddIndexes.get(k).equals(x)) {
 				countXOdd++;
 			}
 		}
@@ -166,20 +168,18 @@ public class Exercises {
 			return false;
 		}
 
-		int leftSum = 0;
-		int rightSum = 0;
-		int middleIndex = numbers.length / 2 - 1;
-		if (numbers.length % 2 == 1) {
-			middleIndex = (int) Math.floor((double) (numbers.length / 2));
-		}
-		for (int i = 0; i <= middleIndex; i++) {
-			leftSum += numbers[i];
-		}
-		for (int i = ++middleIndex; i < numbers.length; i++) {
-			rightSum += numbers[i];
-		}
-		if (leftSum == rightSum) {
-			return true;
+		for (int i = 0; i < numbers.length; i++) {
+			int firstHalf = 0;
+			int secondHalf = 0;
+			for (int j = 0; j < i; j++) {
+				firstHalf += numbers[j];
+			}
+			for (int k = i; k < numbers.length; k++) {
+				secondHalf += numbers[k];
+			}
+			if (firstHalf == secondHalf) {
+				return true;
+			}
 		}
 
 		return false;
