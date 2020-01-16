@@ -60,7 +60,7 @@ Given two arrays of `int`s, `a` and `b`, return `true` if the arrays have either
 
 I've written the input verification portion of this exercise (i.e., the stuff that makes sure the above specifications are met). You'll need to finish the remainder of the exercise.
 
-Use the provided `grader.jar` file to verify your code against my test cases.
+Use the provided `grademe.sh` script to verify your code against my test cases.
 
 ### Exercise 2 (`endsMeet`)
 
@@ -70,7 +70,7 @@ Given an array of `String`s, `values`, return a new array comprised of the first
 - `values` must have a length of at least `n`
 - `n` must be a non-negative integer
 
-Use the provided `grader.jar` file to verify your code against my test cases.
+Use the provided `grademe.sh` script to verify your code against my test cases.
 
 ### Exercise 3 (`difference`)
 
@@ -79,7 +79,7 @@ Given an array of `int`s, `numbers`, return the difference between the largest a
 - `numbers` must not be `null`
 - `numbers` must have a length of at least `1`
 
-Use the provided `grader.jar` file to verify your code against my test cases.
+Use the provided `grademe.sh` script to verify your code against my test cases.
 
 ### Exercise 4 (`biggest`)
 
@@ -89,7 +89,7 @@ Given an array of `double`s, `numbers`, return the largest value among the first
 - `numbers` must have an odd length of at least `3`
 - `numbers` must not contain any negative values
 
-Use the provided `Grader.java` file to verify your code against my test cases.
+Use the provided `grademe.sh` script to verify your code against my test cases.
 
 ### Exercise 5 (`middle`)
 
@@ -99,7 +99,7 @@ Given an array of `String`s, `words`, return a new array comprised of the middle
 - `values` must not contain any `null` values
 - `values` must have an odd length of at least `3`
 
-Use the provided `Grader.java` file to verify your code against my test cases.
+Use the provided `grademe.sh` script to verify your code against my test cases.
 
 ### Exercise 6 (`increasing`)
 
@@ -108,7 +108,7 @@ Given an array of `int`s, `numbers`, return `true` if there exists three consecu
 - `numbers` must not be `null`
 - `numbers` must have a length of at least `3`
 
-Use the provided `Grader.java` file to verify your code against my test cases.
+Use the provided `grademe.sh` script to verify your code against my test cases.
 
 ### Exercise 7 (`everywhere`)
 
@@ -117,7 +117,7 @@ Given an array of `int`s, `values`, and a target `int`, `x`, return `true` if `x
 - `values` must not be `null`
 - `values` must have a length of at least `1`
 
-Use the provided `Grader.java` file to verify your code against my test cases.
+Use the provided `grademe.sh` script to verify your code against my test cases.
 
 ### Exercise 8 (`consecutive`)
 
@@ -126,7 +126,7 @@ Given an array of `int`s, `numbers`, return `true` if the array contains three c
 - `numbers` must not be `null`
 - `numbers` must have a length of at least `3`
 
-Use the provided `Grader.java` file to verify your code against my test cases.
+Use the provided `grademe.sh` script to verify your code against my test cases.
 
 ### Exercise 9 (`balance`)
 
@@ -135,7 +135,7 @@ Given an array of `int`s, `numbers`, return `true` if it is possible to split th
 - `numbers` must not be `null`
 - `numbers` must have a length of at least `2`
 
-Use the provided `Grader.java` file to verify your code against my test cases.
+Use the provided `grademe.sh` script to verify your code against my test cases.
 
 ### Exercise 10 (`clumps`)
 
@@ -144,7 +144,7 @@ Given an array of `String`s, `values`, return the number of _clumps_ in the arra
 - `values` must not be `null`
 - `values` must not contain any `null` values
 
-Use the provided `grader.jar` file to verify your code against my test cases.
+Use the provided `grademe.sh` script to verify your code against my test cases.
 
 ## Tests
 
