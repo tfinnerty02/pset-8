@@ -121,10 +121,10 @@ public class Exercises {
 
 		int countXEven = 0;
 		int countXOdd = 0;
-		for (int i = 0; i < numbers.length; i+= 2) {
+		for (int i = 0; i < numbers.length; i += 2) {
 			evenIndexes.add(numbers[i]);
 		}
-		for (int i = 1; i < numbers.length; i+= 2) {
+		for (int i = 1; i < numbers.length; i += 2) {
 			oddIndexes.add(numbers[i]);
 		}
 		for (int j = 0; j < evenIndexes.size() - 1; j++) {
@@ -159,7 +159,6 @@ public class Exercises {
 				return true;
 			}
 		}
-
 		return false;
 	}
 
