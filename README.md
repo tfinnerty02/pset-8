@@ -74,7 +74,7 @@ Use the provided `grader.jar` file to verify your code against my test cases.
 
 ### Exercise 3 (`difference`)
 
-Given an array of `int`s, `numbers`, return the difference between the largest and smallest values. The input array must meet the following specifications, otherwise you should return `undefined`.
+Given an array of `int`s, `numbers`, return the difference between the largest and smallest values. The input array must meet the following specifications, otherwise you should return `-1`.
 
 - `numbers` must not be `null`
 - `numbers` must have a length of at least `1`
