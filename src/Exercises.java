@@ -1,6 +1,5 @@
 import java.util.*;
 
-
 public class Exercises {
 
 	public static void main(String[] args) {
@@ -21,15 +20,15 @@ public class Exercises {
 
 	public String[] endsMeet(String[] values, int n) {
 		if (values == null || values.length < n || n < 1) {
-            return new String[0];
-        }
-		
+			return new String[0];
+		}
+
 		String[] firstN = Arrays.copyOfRange(values, 0, n);
 		String[] lastN = Arrays.copyOfRange(values, values.length - n, values.length);
-		String[] resultArray = new String[n*2];
-		System.arraycopy(firstN, 0, resultArray, 0, n);  
-		System.arraycopy(lastN, 0, resultArray, n, n);  
-		
+		String[] resultArray = new String[n * 2];
+		System.arraycopy(firstN, 0, resultArray, 0, n);
+		System.arraycopy(lastN, 0, resultArray, n, n);
+
 		return resultArray;
 	}
 
@@ -117,29 +116,57 @@ public class Exercises {
 			return false;
 		}
 
-		int count = 0;
-		for (int i = 0; i < numbers.length; i++) {
-			if (numbers[i] == x) {
-				count++;
+		boolean everywhere = true;
+		int j;
+		for (int i = 0; i < numbers.length - 2; i++) {
+			j = i + 2;
+			if (numbers[i] != numbers[j]) {
+				everywhere = false;
 			}
 		}
 
-		if (count == numbers.length / 2 || count == (numbers.length + 1) / 2 || count == numbers.length) {
-			return true;
-		}
-
-		return false;
-
+		return everywhere;
 	}
 
 	public boolean consecutive(int[] numbers) {
-		// write your code here
+		if (numbers == null || numbers.length < 3) {
+			return false;
+		}
+
+		int j;
+		int k;
+		for (int i = 0; i < numbers.length - 2; i++) {
+			j = i + 1;
+			k = i + 2;
+			if ((numbers[i] % 2 == 0 && numbers[j] % 2 == 0 && numbers[k] % 2 == 0)
+					|| (numbers[i] % 2 == 1 && numbers[j] % 2 == 1 && numbers[k] % 2 == 1)) {
+				return true;
+			}
+		}
 
 		return false; // default return value to ensure compilation
 	}
 
 	public boolean balance(int[] numbers) {
-		// write your code here
+		if (numbers == null || numbers.length < 2) {
+			return false;
+		}
+
+		int leftSum = 0;
+		int rightSum = 0;
+		int middleIndex = numbers.length / 2 - 1;
+		if (numbers.length % 2 == 1) {
+			middleIndex = (int) Math.floor((double) (numbers.length / 2));
+		}
+		for (int i = 0; i <= middleIndex; i++) {
+			leftSum += numbers[i];
+		}
+		for (int i = ++middleIndex; i < numbers.length; i++) {
+			rightSum += numbers[i];
+		}
+		if (leftSum == rightSum) {
+			return true;
+		}
 
 		return false; // default return value to ensure compilation
 	}
