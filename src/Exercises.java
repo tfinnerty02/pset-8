@@ -1,12 +1,10 @@
 import java.util.*;
 
+
 public class Exercises {
 
 	public static void main(String[] args) {
-//		System.out.println(endsMeet(String[] values = {"1", "2", "3", "4", "5", "6"}, 2));
 		System.out.println("p");
-
-//		int[] h = {1, 2, 3, 4, 5, 6, 7, 8};
 	}
 
 	public boolean commonEnd(int[] a, int[] b) {
@@ -14,7 +12,6 @@ public class Exercises {
 			return false;
 		}
 
-		// write your code here
 		if (a[0] == b[0] || a[a.length - 1] == b[b.length - 1]) {
 			return true;
 		}
@@ -23,27 +20,20 @@ public class Exercises {
 	}
 
 	public String[] endsMeet(String[] values, int n) {
-//		if (values == null || values.length < n || n < 0) {
-//			values = new String[0];
-//			return values;
-//		} // work on other cases here
-//
-//		// write your code here
-//		int stringLength = n * 2;
-//		String[] firstLastN = new String[stringLength];
-//		for (int i = 0; i < n; i++) {
-//			firstLastN[i] = values[i];
-//		}
-//		for (int j = n; j < n*2; j++) {
-//			firstLastN[j] = values[values.length - j];
-//		}
-//
-//		return firstLastN;
-		return null;
+		if (values == null || values.length < n || n < 1) {
+            return new String[0];
+        }
+		
+		String[] firstN = Arrays.copyOfRange(values, 0, n);
+		String[] lastN = Arrays.copyOfRange(values, values.length - n, values.length);
+		String[] resultArray = new String[n*2];
+		System.arraycopy(firstN, 0, resultArray, 0, n);  
+		System.arraycopy(lastN, 0, resultArray, n, n);  
+		
+		return resultArray;
 	}
 
 	public int difference(int[] numbers) {
-		// write your code here
 		if (numbers == null || numbers.length < 1) {
 			return -1;
 		}
@@ -113,21 +103,33 @@ public class Exercises {
 		if (numbers == null || numbers.length < 3) {
 			return false;
 		}
-		
-		// write your code here
+
 		for (int i = 0; i < numbers.length; i += 3) {
-			if (numbers[i] < numbers[i+1] && numbers[i+1] <= numbers[i+2]) {
+			if (numbers[i] < numbers[i + 1] && numbers[i + 1] <= numbers[i + 2]) {
 				return true;
 			}
 		}
-
 		return false; // default return value to ensure compilation
 	}
 
 	public boolean everywhere(int[] numbers, int x) {
-		// write your code here
+		if (numbers == null || numbers.length < 1) {
+			return false;
+		}
 
-		return false; // default return value to ensure compilation
+		int count = 0;
+		for (int i = 0; i < numbers.length; i++) {
+			if (numbers[i] == x) {
+				count++;
+			}
+		}
+
+		if (count == numbers.length / 2 || count == (numbers.length + 1) / 2 || count == numbers.length) {
+			return true;
+		}
+
+		return false;
+
 	}
 
 	public boolean consecutive(int[] numbers) {
