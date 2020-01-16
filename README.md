@@ -148,19 +148,13 @@ Use the provided `grader.jar` file to verify your code against my test cases.
 
 ## Tests
 
-To test your code, use the provided `grader.jar` file. You'll need to unzip `grader.zip`, which contains `grader.jar` and a necessary `config` folder. To run the JAR file, use the following command.
+To test your code, use the provided `grademe.sh` script. To run the script, use the following command.
 
 ```
-java -jar grader.jar
+./grademe.sh exerciseName
 ```
 
-If you run the JAR from the same directory as your `Exercises.class` file, this will work fine. If you're running the JAR from a different directory, you'll need to add your `.class` file to my JAR file.
-
-```
-jar uf grader.jar /path/to/Exercises.class
-```
-
-It'll output the number passing test cases, as well as the input, expected output, and actual output of any failing test cases.
+It'll output the number passing test cases, as well as the input, expected output, and actual output of any failing test cases. Make sure your code is compiling before running this script, as it depends on the existence of a successfully compiling `Exercises.java` file.
 
 ## Deadline
 
