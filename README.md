@@ -49,6 +49,8 @@ The specifications for each exercise are outlined below. Your job is to write li
 
 Work through these exercises on your own. Experiment, make mistakes, ask questions, and fix your mistakes. It's the only way to get good at programming.
 
+While each of these exercises can be solved using loops and conditional statements, the built-in methods of the `Arrays` class will surely make your lives much easier. [Read the documentation](https://docs.oracle.com/en/java/javase/12/docs/api/java.base/java/util/Arrays.html) and use these methods to help streamline your code!
+
 ### Exercise 1 (`commonEnd`)
 
 Given two arrays of `int`s, `a` and `b`, return `true` if the arrays have either the same first element or the same last element. The arrays must meed the following specifications, otherwise you should return `false`.
@@ -58,7 +60,7 @@ Given two arrays of `int`s, `a` and `b`, return `true` if the arrays have either
 
 I've written the input verification portion of this exercise (i.e., the stuff that makes sure the above specifications are met). You'll need to finish the remainder of the exercise.
 
-Use the provided `Grader.java` file to verify your code against my test cases.
+Use the provided `grader.jar` file to verify your code against my test cases.
 
 ### Exercise 2 (`endsMeet`)
 
@@ -68,7 +70,7 @@ Given an array of `String`s, `values`, return a new array comprised of the first
 - `values` must have a length of at least `n`
 - `n` must be a non-negative integer
 
-Use the provided `Grader.java` file to verify your code against my test cases.
+Use the provided `grader.jar` file to verify your code against my test cases.
 
 ### Exercise 3 (`difference`)
 
@@ -77,14 +79,15 @@ Given an array of `int`s, `numbers`, return the difference between the largest a
 - `numbers` must not be `null`
 - `numbers` must have a length of at least `1`
 
-Use the provided `Grader.java` file to verify your code against my test cases.
+Use the provided `grader.jar` file to verify your code against my test cases.
 
 ### Exercise 4 (`biggest`)
 
-Given an array of `double`s, `numbers`, return the largest value among the first, middle, and last elements in the array. The input array must meet the following specifications, otherwise you should return `undefined`.
+Given an array of `double`s, `numbers`, return the largest value among the first, middle, and last elements in the array. The input array must meet the following specifications, otherwise you should return `-1`.
 
 - `numbers` must not be `null`
 - `numbers` must have an odd length of at least `3`
+- `numbers` must not contain any negative values
 
 Use the provided `Grader.java` file to verify your code against my test cases.
 
@@ -100,7 +103,7 @@ Use the provided `Grader.java` file to verify your code against my test cases.
 
 ### Exercise 6 (`increasing`)
 
-Given an array of `int`s, `numbers`, return `true` if there exists three consecutively increasing numbers somewhere in the array. The input array must meet the following speciications, otherwise you should return `false`.
+Given an array of `int`s, `numbers`, return `true` if there exists three consecutively increasing integers somewhere in the array. The input array must meet the following speciications, otherwise you should return `false`.
 
 - `numbers` must not be `null`
 - `numbers` must have a length of at least `3`
@@ -109,7 +112,7 @@ Use the provided `Grader.java` file to verify your code against my test cases.
 
 ### Exercise 7 (`everywhere`)
 
-Given an array of `int`s, `values`, and a target `int`, `x`, return `true` if `x` is _everywhere_ in the array. A target is defined as being _everywhere_ if it is located adjacent to every other element. The input array and target must meet the following specifications, otherwise you should return `false`. Use strict equality when making your comparisons.
+Given an array of `int`s, `values`, and a target `int`, `x`, return `true` if `x` is _everywhere_ in the array. A target is defined as being _everywhere_ if it is located adjacent to every other element. The input array and target must meet the following specifications, otherwise you should return `false`.
 
 - `values` must not be `null`
 - `values` must have a length of at least `1`
@@ -136,7 +139,7 @@ Use the provided `Grader.java` file to verify your code against my test cases.
 
 ### Exercise 10 (`clumps`)
 
-Given an array of `String`s, `values`, return the number of _clumps_ in the array. A _clump_ is defined as a consecutive series of two or more identical values. The input array must meet the following specifications, otherwise you should return `-1`. Use strict equality when making your comparisons.
+Given an array of `String`s, `values`, return the number of _clumps_ in the array. A _clump_ is defined as a consecutive series of two or more identical values. The input array must meet the following specifications, otherwise you should return `-1`.
 
 - `values` must not be `null`
 - `values` must not contain any `null` values
