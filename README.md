@@ -60,7 +60,7 @@ Given two arrays of `int`s, `a` and `b`, return `true` if the arrays have either
 
 I've written the input verification portion of this exercise (i.e., the stuff that makes sure the above specifications are met). You'll need to finish the remainder of the exercise.
 
-Use the provided `grader.jar` file to verify your code against my test cases.
+Use the provided `grademe.sh` script to verify your code against my test cases.
 
 ### Exercise 2 (`endsMeet`)
 
@@ -70,16 +70,16 @@ Given an array of `String`s, `values`, return a new array comprised of the first
 - `values` must have a length of at least `n`
 - `n` must be a non-negative integer
 
-Use the provided `grader.jar` file to verify your code against my test cases.
+Use the provided `grademe.sh` script to verify your code against my test cases.
 
 ### Exercise 3 (`difference`)
 
-Given an array of `int`s, `numbers`, return the difference between the largest and smallest values. The input array must meet the following specifications, otherwise you should return `undefined`.
+Given an array of `int`s, `numbers`, return the difference between the largest and smallest values. The input array must meet the following specifications, otherwise you should return `-1`.
 
 - `numbers` must not be `null`
 - `numbers` must have a length of at least `1`
 
-Use the provided `grader.jar` file to verify your code against my test cases.
+Use the provided `grademe.sh` script to verify your code against my test cases.
 
 ### Exercise 4 (`biggest`)
 
@@ -89,7 +89,7 @@ Given an array of `double`s, `numbers`, return the largest value among the first
 - `numbers` must have an odd length of at least `3`
 - `numbers` must not contain any negative values
 
-Use the provided `Grader.java` file to verify your code against my test cases.
+Use the provided `grademe.sh` script to verify your code against my test cases.
 
 ### Exercise 5 (`middle`)
 
@@ -99,7 +99,7 @@ Given an array of `String`s, `words`, return a new array comprised of the middle
 - `values` must not contain any `null` values
 - `values` must have an odd length of at least `3`
 
-Use the provided `Grader.java` file to verify your code against my test cases.
+Use the provided `grademe.sh` script to verify your code against my test cases.
 
 ### Exercise 6 (`increasing`)
 
@@ -108,7 +108,7 @@ Given an array of `int`s, `numbers`, return `true` if there exists three consecu
 - `numbers` must not be `null`
 - `numbers` must have a length of at least `3`
 
-Use the provided `Grader.java` file to verify your code against my test cases.
+Use the provided `grademe.sh` script to verify your code against my test cases.
 
 ### Exercise 7 (`everywhere`)
 
@@ -117,7 +117,7 @@ Given an array of `int`s, `values`, and a target `int`, `x`, return `true` if `x
 - `values` must not be `null`
 - `values` must have a length of at least `1`
 
-Use the provided `Grader.java` file to verify your code against my test cases.
+Use the provided `grademe.sh` script to verify your code against my test cases.
 
 ### Exercise 8 (`consecutive`)
 
@@ -126,7 +126,7 @@ Given an array of `int`s, `numbers`, return `true` if the array contains three c
 - `numbers` must not be `null`
 - `numbers` must have a length of at least `3`
 
-Use the provided `Grader.java` file to verify your code against my test cases.
+Use the provided `grademe.sh` script to verify your code against my test cases.
 
 ### Exercise 9 (`balance`)
 
@@ -135,7 +135,7 @@ Given an array of `int`s, `numbers`, return `true` if it is possible to split th
 - `numbers` must not be `null`
 - `numbers` must have a length of at least `2`
 
-Use the provided `Grader.java` file to verify your code against my test cases.
+Use the provided `grademe.sh` script to verify your code against my test cases.
 
 ### Exercise 10 (`clumps`)
 
@@ -144,23 +144,17 @@ Given an array of `String`s, `values`, return the number of _clumps_ in the arra
 - `values` must not be `null`
 - `values` must not contain any `null` values
 
-Use the provided `grader.jar` file to verify your code against my test cases.
+Use the provided `grademe.sh` script to verify your code against my test cases.
 
 ## Tests
 
-To test your code, use the provided `grader.jar` file. You'll need to unzip `grader.zip`, which contains `grader.jar` and a necessary `config` folder. To run the JAR file, use the following command.
+To test your code, use the provided `grademe.sh` script. To run the script, use the following command.
 
 ```
-java -jar grader.jar
+./grademe.sh exerciseName
 ```
 
-If you run the JAR from the same directory as your `Exercises.class` file, this will work fine. If you're running the JAR from a different directory, you'll need to add your `.class` file to my JAR file.
-
-```
-jar uf grader.jar /path/to/Exercises.class
-```
-
-It'll output the number passing test cases, as well as the input, expected output, and actual output of any failing test cases.
+It'll output the number passing test cases, as well as the input, expected output, and actual output of any failing test cases. Make sure your code is compiling before running this script, as it depends on the existence of a successfully compiling `Exercises.java` file.
 
 ## Deadline
 
